@@ -1,0 +1,98 @@
+{
+  "LAYERS": {
+    "bras": {
+      "path": "/home/poch/Develop/CANTV/Reportes-taccess/Bras",
+      "columns": {
+        "interface": "string",
+        "bandwidth": "float16",
+        "inAvg": "float16",
+        "outAvg": "float16",
+        "inMax": "float16",
+        "outMax": "float16",
+        "use": "float16"
+      },
+      "sep": " ",
+      "decimal": "."
+    },
+    "l2-l3": {
+      "path": "/home/poch/Develop/CANTV/Reportes-taccess/L2-L3",
+      "columns": {
+        "interface": "string",
+        "bandwidth": "float16",
+        "inAvg": "float16",
+        "inMax": "float16",
+        "outAvg": "float16",
+        "outMax": "float16",
+        "use": "float16"
+      },
+      "sep": " ",
+      "decimal": ","
+    },
+    "metro": {
+      "path": "/home/poch/Develop/CANTV/Reportes-taccess/MetroAnillos",
+      "columns": {
+        "interface": "string",
+        "bandwidth": "float16",
+        "outAvg": "float16",
+        "inAvg": "float16",
+        "outMax": "float16",
+        "inMax": "float16",
+        "use": "float16"
+      },
+      "sep": " ",
+      "decimal": ","
+    },
+    "opsut": {
+      "path": "/home/poch/Develop/CANTV/Reportes-taccess/OPSUT",
+      "columns": {
+        "ignored": "string",
+        "interface": "string",
+        "bandwidth": "float16",
+        "inAvg": "float16",
+        "outAvg": "float16",
+        "inMax": "float16",
+        "outMax": "float16",
+        "use": "float16"
+      },
+      "sep": " ",
+      "decimal": ","
+    },
+    "nodes": {
+      "path": "/home/poch/Develop/CANTV/Reportes-taccess/Nodos",
+      "columns": {
+        "ignored": "string",
+        "interface": "string",
+        "bandwidth": "float16",
+        "inAvg": "float16",
+        "outAvg": "float16",
+        "inMax": "float16",
+        "outMax": "float16",
+        "use": "float16"
+      },
+      "sep": " ",
+      "decimal": ","
+    },
+    "olt-mdu": {
+      "path": "/home/poch/Develop/CANTV/Reportes-taccess/OLT-MDU",
+      "columns": {
+        "interface": "string",
+        "bandwidth": "float16",
+        "inAvg": "float16",
+        "outAvg": "float16",
+        "inMax": "float16",
+        "outMax": "float16",
+        "use": "float16"
+      },
+      "sep": " ",
+      "decimal": ","
+    }
+  },
+  "BLACKLIST": ["sumaro", "sumatoria", "resumen", "critic", "sumarotiah3"],
+  "API_ACCESS_TOKEN": "token-super-secure",
+  "API_ENDPOINTS": {
+    "dashboardTrend": "http://httpbin.org/post",
+    "dashboardDoughnut": "http://httpbin.org/post",
+    "summary": "http://httpbin.org/post"
+  },
+  "myToken": "myToken"
+}
