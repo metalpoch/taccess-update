@@ -1,88 +1,88 @@
 {
   "LAYERS": {
     "bras": {
-      "path": "/home/poch/Develop/CANTV/Reportes-taccess/Bras",
-      "columns": {
-        "interface": "string",
-        "bandwidth": "float16",
-        "inAvg": "float16",
-        "outAvg": "float16",
-        "inMax": "float16",
-        "outMax": "float16",
-        "use": "float16"
-      },
+      "path": "/home/kurbil01/Documentos/Reportes-taccess/Bras",
+      "columns": [
+        "interfaces",
+        "bandwidth",
+        "inAvg",
+        "outAvg",
+        "inMax",
+        "outMax",
+        "use"
+      ],
       "sep": " ",
       "decimal": "."
     },
     "l2-l3": {
-      "path": "/home/poch/Develop/CANTV/Reportes-taccess/L2-L3",
-      "columns": {
-        "interface": "string",
-        "bandwidth": "float16",
-        "inAvg": "float16",
-        "inMax": "float16",
-        "outAvg": "float16",
-        "outMax": "float16",
-        "use": "float16"
-      },
+      "path": "/home/kurbil01/Documentos/Reportes-taccess/L2-L3",
+      "columns": [
+        "interfaces",
+        "bandwidth",
+        "inAvg",
+        "inMax",
+        "outAvg",
+        "outMax",
+        "use"
+      ],
       "sep": " ",
       "decimal": ","
     },
     "metro": {
-      "path": "/home/poch/Develop/CANTV/Reportes-taccess/MetroAnillos",
-      "columns": {
-        "interface": "string",
-        "bandwidth": "float16",
-        "outAvg": "float16",
-        "inAvg": "float16",
-        "outMax": "float16",
-        "inMax": "float16",
-        "use": "float16"
-      },
+      "path": "/home/kurbil01/Documentos/Reportes-taccess/MetroAnillos",
+      "columns": [
+        "interfaces",
+        "bandwidth",
+        "outAvg",
+        "inAvg",
+        "outMax",
+        "inMax",
+        "use"
+      ],
       "sep": " ",
-      "decimal": ","
+      "decimal": "."
     },
     "opsut": {
-      "path": "/home/poch/Develop/CANTV/Reportes-taccess/OPSUT",
-      "columns": {
-        "ignored": "string",
-        "interface": "string",
-        "bandwidth": "float16",
-        "inAvg": "float16",
-        "outAvg": "float16",
-        "inMax": "float16",
-        "outMax": "float16",
-        "use": "float16"
-      },
+      "path": "/home/kurbil01/Documentos/Reportes-taccess/OPSUT",
+      "columns": [
+        "ignored",
+        "interfaces",
+        "bandwidth",
+        "inAvg",
+        "outAvg",
+        "inMax",
+        "outMax",
+        "use"
+      ],
       "sep": " ",
-      "decimal": ","
+      "decimal": "."
     },
     "nodes": {
-      "path": "/home/poch/Develop/CANTV/Reportes-taccess/Nodos",
-      "columns": {
-        "ignored": "string",
-        "interface": "string",
-        "bandwidth": "float16",
-        "inAvg": "float16",
-        "outAvg": "float16",
-        "inMax": "float16",
-        "outMax": "float16",
-        "use": "float16"
-      },
+      "path": "/home/kurbil01/Documentos/Reportes-taccess/Nodos",
+      "columns": [
+        "ignored",
+        "interfaces",
+        "bandwidth",
+        "inAvg",
+        "outAvg",
+        "inMax",
+        "outMax",
+        "use"
+      ],
       "sep": " ",
       "decimal": ","
     },
     "olt-mdu": {
-      "path": "/home/poch/Develop/CANTV/Reportes-taccess/OLT-MDU",
-      "columns": {
-        "interface": "string",
-        "bandwidth": "float16",
-        "inAvg": "float16",
-        "outAvg": "float16",
-        "inMax": "float16",
-        "outMax": "float16",
-        "use": "float16"
-      },
+      "path": "/home/kurbil01/Documentos/Reportes-taccess/OLT-MDU",
+      "columns": [
+        "interfaces",
+        "bandwidth",
+        "inAvg",
+        "outAvg",
+        "inMax",
+        "outMax",
+        "use"
+      ],
       "sep": " ",
       "decimal": ","
     }
