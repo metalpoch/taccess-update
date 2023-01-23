@@ -1,6 +1,7 @@
 import json
 import requests
 
+
 def post(url: str, access_token: str, file: str, errors: dict) -> tuple:
     with open(file, 'r') as f:
         data = json.load(f)

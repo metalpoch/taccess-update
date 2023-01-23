@@ -11,6 +11,7 @@ PATH = path.dirname(path.abspath(__file__))
 with open(path.join(PATH, "config.json"), "r") as file:
     CONFIG = json.load(file)
 
+
 def setting_layer() -> dict[str, str]:
     layer = cli.args.layer
     settings = CONFIG["LAYERS"]
@@ -29,6 +30,7 @@ def setting_layer() -> dict[str, str]:
             "decimal": settings["decimal"],
             "blacklist": CONFIG["BLACKLIST"]
         }
+
 
 def url_endpoint(endpoint: str) -> tuple:
     endpoints = CONFIG["API_ENDPOINTS"]
