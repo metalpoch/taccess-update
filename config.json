@@ -93,6 +93,5 @@
     "dashboardTrend": "http://httpbin.org/post",
     "dashboardDoughnut": "http://httpbin.org/post",
     "summary": "http://httpbin.org/post"
-  },
-  "myToken": "myToken"
+  }
 }
