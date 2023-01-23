@@ -50,8 +50,6 @@ def main() -> None:
     endpoint = cli.args.update
 
     metadata = setting_layer()
-    if endpoint:
-        url, access_token = url_endpoint(endpoint)
 
     days = range_days(cli.args.firstday, cli.args.lastday)
     lenght = len(days)
@@ -84,7 +82,8 @@ def main() -> None:
                 errors=errors
             )
 
-            if endpoint:
+            if endpoint and output_json:
+                url, access_token = url_endpoint(endpoint)
                 update_success, errors = taccess_update.post(
                     url=url,
                     access_token=access_token,
