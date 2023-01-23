@@ -48,7 +48,8 @@ def main() -> None:
     endpoint = cli.args.update
 
     metadata = setting_layer()
-    url, access_token = url_endpoint(cli.args.update) if endpoint else ""
+    if endpoint:
+        url, access_token = url_endpoint(endpoint)
 
     days = range_days(cli.args.firstday, cli.args.lastday)
     lenght = len(days)
