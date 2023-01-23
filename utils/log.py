@@ -3,34 +3,20 @@ def __days_counter(n: int) -> str:
 
 
 def __errors_counter(e: dict) -> str:
-    n_warn, n_err = 0, 0
+    n_csv, n_core, n_update = 0, 0 ,0
+    for k in e:
+        if k.startswith("CreateJson"):
+            n_csv = len(e[k])
+        elif k.startswith("Update"):
+            n_update = len(e[k])
+        else:
+            n_core = len(e[k])
 
-    for k in e.keys():
-        if k == "FileNotFoundError":  # msg_error
-            n_err += len(e[k])
-        else:  # other erros as msg_warning
-            n_warn += len(e[k])
+    msg_csv = f"-\x1b[1;36m {n_csv} csv errors \x1b[0;0m"
+    msg_core = f"-\x1b[1;31m {n_core} core errors \x1b[0;0m"
+    msg_update = f"-\x1b[1;33m {n_update} update errors \x1b[0;0m"
 
-    if n_err == 1:
-        msg = f"{n_err} day error"
-        msg_error = f"-\x1b[1;31m {msg} \x1b[0;0m"
-    elif n_err > 1:
-        msg = f"{n_err} day errors"
-        msg_error = f"-\x1b[1;31m {msg} \x1b[0;0m"
-    else:
-        msg_error = ""
-
-    if n_warn == 1:
-        msg = f"{n_warn} error read csv"
-        msg_warning = f"-\x1b[1;31m {msg} \x1b[0;0m"
-    elif n_warn > 1:
-        msg = f"{n_warn} errors read csv"
-        msg_warning = f"-\x1b[1;33m {msg} \x1b[0;0m"
-    else:
-        msg_warning = ""
-
-
-    return msg_warning + msg_error
+    return msg_csv + msg_update + msg_core
 
 
 def __updates(n: int) -> str:
@@ -53,7 +39,7 @@ def percentage(current: int, limit: int, errors: dict, updates: int) -> None:
     n_errors = __errors_counter(errors)
     n_updates = __updates(updates)
 
-    print(f"\r{percent}% -> {n_days} {n_errors} {n_updates}", end="")
+    print(f"\r{percent}% -> {n_days} {n_updates} {n_errors}", end="")
 
 
 
