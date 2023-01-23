@@ -2,7 +2,10 @@ import json
 from os import path
 from sys import exit
 
+import numpy as np
 import pandas as pd
+
+from utils import log
 
 
 def create_json(
@@ -21,18 +24,16 @@ def create_json(
     report_path = path.join(metadata["path"], day)
     for report in reports:
         filename = path.join(report_path, report)
-        dtype = dict(metadata["columns"].items())
-        names = dtype.keys()
+        names = metadata["columns"]
 
         try:
             df = pd.read_csv(
                 filename,
                 header=0,
                 names=names,
-                dtype=dtype,
                 sep=metadata["sep"],
                 decimal=metadata["decimal"],
-            ).fillna(0)
+            ).fillna(0).replace([np.inf, -np.inf], 0)
 
         except BaseException as  e:
             type_error = f"CreateJson{e.__class__.__name__}"
