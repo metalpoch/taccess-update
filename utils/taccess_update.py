@@ -40,7 +40,7 @@ def post(url: str, access_token: str, file: str, errors: dict) -> tuple:
 
         if status_code != 200:
             type_error = "UpdateStatuCode"
-            msg_error = f"Status {status_code} responsed from '{url}'"
+            msg_error = f"Status {status_code} responsed from '{url}' on {file}"
             if errors.get(type_error):
                 errors[type_error].append(msg_error)
             else:
