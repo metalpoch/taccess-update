@@ -90,8 +90,10 @@
   "BLACKLIST": ["sumaro", "sumatoria", "resumen", "critic", "sumarotiah3"],
   "API_ACCESS_TOKEN": "token-super-secure",
   "API_ENDPOINTS": {
-    "dashboardTrend": "http://httpbin.org/post",
-    "dashboardDoughnut": "http://httpbin.org/post",
-    "summary": "http://httpbin.org/post"
+    "dashboardTrend": "http://httpbin.org/post/dashboardTrend",
+    "dashboardDoughnut": "http://httpbin.org/post/dashboardDoughnut",
+    "summaryMetro": "http://httpbin.org/post/Metro",
+    "summaryNodes": "http://httpbin.org/post/Nodes",
+    "summaryOther": "http://httpbin.org/post/Other"
   }
 }
