@@ -32,7 +32,7 @@ def create_json(
                 dtype=dtype,
                 sep=metadata["sep"],
                 decimal=metadata["decimal"],
-            )
+            ).fillna(0)
 
         except BaseException as  e:
             type_error = f"CreateJson{e.__class__.__name__}"
@@ -47,7 +47,7 @@ def create_json(
             group = report.replace(".csv", "")
             document["reports"].append({
                 "group": group,
-                "interface": df["interface"].tolist(),
+                "interfaces": df["interfaces"].tolist(),
                 "inAvg": df["inAvg"].tolist(),
                 "inMax": df["inMax"].tolist(),
                 "outAvg": df["outAvg"].tolist(),
